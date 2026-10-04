@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Enrollment Form</title>
+
+    <!-- JSEncrypt library used for RSA encryption -->
+    <script src="https://cdn.jsdelivr.net/npm/jsencrypt@latest/bin/jsencrypt.min.js"></script>
+
+    <!-- External CSS file for styling the enrollment form -->
+    <link rel="stylesheet" href="sursa.css">
+</head>
+
+<body>
+
+    <!-- Main container that holds the enrollment form and encrypted result -->
+    <div class="container">
+
+        <!-- Enrollment form section -->
+        <div class="form-section">
+
+            <!-- Main heading of the page -->
+            <h1>Enrollment Form</h1>
+
+            <!-- Form for collecting student information -->
+            <form id="enrollementForm">
+
+                <!-- Student's full name -->
+                <label for="name">Full Name:</label>
+                <input id="name" type="text"/>
+
+                <label for="birthdate">Date of Birth:</label>
+                <input id="birthdate" type="date"/>
+
+                <label for="year_level">Year Level:</label>
+                <input id="year_level" type="text"/>
+
+                <label for="gender">Gender:</label>
+                <input id="gender" type="text"/>
+
+                <label for="username">Username:</label>
+                <input id="username" type="text"/>
+
+                <!-- Student's password -->
+                <label for="password">Password:</label>
+                <input id="password" type="password"/>
+
+                <!-- Button used to submit the enrollment form -->
+                <button type="submit">Enroll</button>
+            </form>
+        </div>
+
+        <!-- Section that displays the encrypted information -->
+        <div class="result-section">
+
+            <!-- Heading for the encrypted payload -->
+            <h2>Encrypted Payload (Sampling)</h2>
+
+            <!-- Area where the encrypted data will be displayed -->
+            <pre id="output">
+Encrypted data will appear here...
+            </pre>
+        </div>
+
+    </div>
+
+    <!-- External JavaScript file that handles the form and encryption -->
+    <script src="sursa.js"></script>
+
+</body>
+</html>

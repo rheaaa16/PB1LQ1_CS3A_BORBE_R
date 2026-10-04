@@ -1,0 +1,122 @@
+/* Reset default margin and padding for all elements */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Main page design and background */
+body{
+    font-family: Arial, sans-serif;
+    min-height:100vh;
+    color:white;
+
+    /* Creates a dark green gradient background */
+    background:
+    radial-gradient(circle at top left,
+    rgba(6, 43, 43, 0.5) 0%,
+    rgba(3, 40, 40, 0.15) 20%,
+    transparent 45%),
+
+    radial-gradient(circle at bottom center,
+    rgba(2, 54, 37, 0.45) 0%,
+    rgba(5, 55, 26, 0.15) 25%,
+    transparent 50%),
+
+    linear-gradient(
+    180deg,
+    #03342d 0%,
+    #013832 50%,
+    #000000 100%);
+}
+
+/* Arranges the form and encrypted result side by side */
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:60px;
+    padding:60px;
+}
+
+/* Sets the width of the enrollment form */
+.form-section{
+    width:350px;
+}
+
+/* Adds space below the main heading */
+.form-section h1{
+    margin-bottom:30px;
+}
+
+/* Styles the form labels */
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+/* Styles the input fields */
+input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:rgba(255,255,255,0.15);
+    color:white;
+    outline:none;
+}
+
+/* Changes the placeholder text color */
+input::placeholder{
+    color:#ddd;
+}
+
+/* Styles the Enroll button */
+button{
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:#185047;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* Makes the button slightly transparent when hovered */
+button:hover{
+    opacity:0.9;
+}
+
+/* Sets the width of the encrypted result section */
+.result-section{
+    width:500px;
+}
+
+/* Adds space below the result heading */
+.result-section h2{
+    margin-bottom:20px;
+}
+
+/* Styles the box where encrypted data is displayed */
+pre{
+    width:100%;
+    max-width:700px;
+    min-height:250px;
+
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:10px;
+    padding:20px;
+
+    color:white;
+
+    /* Keeps long encrypted text inside the box */
+    white-space:pre-wrap;
+    overflow-wrap:break-word;
+    word-break:break-all;
+
+    /* Allows scrolling when the encrypted data is long */
+    overflow-y:auto;
+    overflow-x:hidden;
+}
